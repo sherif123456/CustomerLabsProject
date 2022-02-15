@@ -1,3 +1,7 @@
+body{
+    margin-top: 5rem;
+}
+
 .modal {
     position: fixed;
     left: 0;
@@ -8,11 +12,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .modal-content{
     width: 550px;
-    height: 750px;
+    height: 600px;
     background-color: #fff;
 }
 
@@ -22,6 +27,7 @@
     background-color: #00CED1;
     color: #fff;
     text-align: left;
+   
 }
 
 .modal-header h4{
@@ -47,5 +53,11 @@
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
     text-align: left;
+}
+
+.btnclose{
+   position: relative;
+   top: 100rem;
+
 }
 

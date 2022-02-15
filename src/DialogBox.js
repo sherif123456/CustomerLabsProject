@@ -16,9 +16,6 @@ function DialogBox(props){
                         {props.children}
                     </div>
                 </div>
-                <div>
-                    <Button variant="danger" className='btn-cancel' onClick={props.handleClose}>Cancel</Button>
-                    </div>
             </div>
         );
     } else {

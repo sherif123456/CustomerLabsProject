@@ -1,7 +1,10 @@
 //import { isContentEditable } from '@testing-library/user-event/dist/utils';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import {useState} from 'react';
 import './SegmentForm.css';
 import Button from 'react-bootstrap/Button';
+
 
 const DEFAULT_VALUE = 'Add schema to segment';
 
@@ -18,6 +21,8 @@ function SegmentForm(props){
         {label: "City", Value: 'city'},
         {label: "State", Value: 'state'}
     ]);
+    // const notify = () => toast("Wow so easy!");
+
     const addNewSchema = function(){
         if (newSchema===DEFAULT_VALUE) return;
         setSelectedSchemas([...selectedSchemas, ...schemas.filter(item => item.Value===newSchema)]);
@@ -30,6 +35,10 @@ function SegmentForm(props){
         setSelectedSchemas([...selectedSchemas.slice(0,idx), ...newSchema, ...selectedSchemas.slice(idx+1)]);
         setSchemas([...schemas.filter(item => item.Value!==newValue), ...schemaRemoved])
     };
+
+
+    
+
     const handleSave = async function(){
         const url = 'https://webhook.site/835107aa-ba72-48ba-ab21-dccbcb9e3c99';
         if (segmentName && selectedSchemas.length>0) {
@@ -48,12 +57,14 @@ function SegmentForm(props){
                     body: JSON.stringify(content)
                 });
                 console.log(response);
+                toast("Wow so easy!");
             } catch(error){
                 console.log(error);
                 alert('Sorry unable to update the segment');
             }
         } else {
-            alert('Please enter segment name and select schemas to add');
+             alert('Please enter segment name and select schemas to add');
+            // toast("Please enter segment name and select schemas to add");
         }
     }
     return (
@@ -67,15 +78,18 @@ function SegmentForm(props){
                         return (
                             <div className="segment-item">
                                 <span className='indicator'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                <select  key={idx} value={selectedSchemas[idx].Value} onChange={(event) => changeSelectedSchema(idx, event.target.value)}>
+                                <select key={idx} value={selectedSchemas[idx].Value} onChange={(event) => changeSelectedSchema(idx, event.target.value)}>
                                     <option key={99} value={item.Value}>{item.label}</option>
                                     {schemas.filter(item => !selectedSchemas.includes(item.Value)).map((item, idx) => (<option key={idx} value={item.Value}>{item.label}</option>))}
                                 </select>
-                                <button className="remove-icon">
+                            
+                                   
+                                <button className="remove-icon" >
                                     &nbsp;
                                     <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                                     &nbsp;
                                 </button>
+                                   
                             </div>
                         )
                     })}
@@ -93,8 +107,9 @@ function SegmentForm(props){
             </div>
             <div className='action-container'>
                 <div>
-                    <Button onClick={handleSave}>Save the segment</Button>
+                    <Button onClick={handleSave} >Save the segment</Button>
                 </div>
+                <ToastContainer />
             </div>
         </div>
     );
