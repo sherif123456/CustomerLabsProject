@@ -1,0 +1,69 @@
+.segment-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.segment-form input, .segment-item select, .segment-item select{
+    padding: 5px;
+    border-radius: 1px;
+    margin: 10px 0px;
+    flex: 1;
+    border: 1px solid;
+}
+
+.segment-item{
+    display: flex;
+    flex-direction: row;
+    padding: 0px 10px;
+    /* height: 20px; */
+}
+
+/* .segment-item .indicator {
+    background-color: green;
+    border-radius: 100px;
+    margin: 20px 5px 20px 0px;
+} */
+
+
+.remove-icon{
+    margin: 10px 5px 10px 15px;
+    /* background-color: #bad1f7; */
+}
+
+.remove-icon span {
+    text-decoration: line-through solid #067a91 5px;
+    /* background-color: #bad1f7; */
+}
+
+.add-schema-button{
+    margin-top: 10px;
+    padding-left: 10px;
+    text-decoration: underline solid #00CED1;
+    color: #00CED1;
+    cursor: pointer;
+}
+
+.action-container div{
+    background-color: #D3D3D3;
+    position: relative;
+    padding: 15px 20px;
+    left: -20px;
+    right: 20px;
+    bottom: -400px;
+    width: 548px;
+    display: flex;
+    justify-content: center;
+  
+}
+
+/* .action-container button {
+    padding: 10px;
+    background-color: #00CED1;
+    color: #fff;
+} */
+
+
+
+.segment-form button{
+    border: 0;
+}
