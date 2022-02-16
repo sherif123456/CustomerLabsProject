@@ -1,6 +1,8 @@
 //import {useState} from 'react';
+
 import './DialogBox.css';
 import Button from 'react-bootstrap/Button';
+
 
 function DialogBox(props){
     let modalContent = null;
@@ -14,7 +16,9 @@ function DialogBox(props){
                     </div>
                     <div className="modal-body">
                         {props.children}
+                     
                     </div>
+             
                 </div>
             </div>
         );

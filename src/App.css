@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.btnSave{
+  margin-top: 5rem;
+}
+
+.SavSegment{
+  text-align: left;
+}

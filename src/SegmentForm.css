@@ -5,7 +5,7 @@
 
 .segment-form input, .segment-item select, .segment-item select{
     padding: 5px;
-    border-radius: 1px;
+    border-radius: 3px;
     margin: 10px 0px;
     flex: 1;
     border: 1px solid;
@@ -14,30 +14,28 @@
 .segment-item{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     padding: 0px 10px;
-     height: 50px; 
 }
 
-/* .form-control{
-    width: 100px;
-} */
-
-/* .segment-item .indicator {
+.segment-item .indicator {
     background-color: green;
     border-radius: 100px;
     margin: 20px 5px 20px 0px;
-} */
+}
 
+/* .segment-list {
+    border: 2px solid blue;
+} */
 
 .remove-icon{
     margin: 10px 5px 10px 15px;
-    /* background-color: #bad1f7; */
+    background-color: #bad1f7;
+    
 }
 
 .remove-icon span {
     text-decoration: line-through solid #067a91 5px;
-    /* background-color: #bad1f7; */
+    background-color: #bad1f7;
 }
 
 .add-schema-button{
@@ -54,20 +52,21 @@
     padding: 15px 20px;
     left: -20px;
     right: 20px;
-    bottom: -300px;
-    width: 548px;
+    bottom: -20px;
+    width: 498px;
     display: flex;
     justify-content: center;
-  
 }
 
-/* .action-container button {
+.action-container button {
     padding: 10px;
-    background-color: #00CED1;
+   
     color: #fff;
+}
+
+/* .action-container button:hover {
+    background-color: #40E0D0;
 } */
-
-
 
 .segment-form button{
     border: 0;
